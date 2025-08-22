@@ -3,6 +3,11 @@
         <meta charset="UFT-8">
         <title>Título da Página</title> 
         <!-- Fica como o título da baixa em mecanismos de busca -->
+         <script>
+            function soma(a, b) {
+                alert(a + b);
+            }
+         </script>
     </head>
     <body>
         <h1>Primeiro Cabeçalho</h1>
@@ -50,5 +55,59 @@
                 <td> Linha 3 - Coluna 2</td>
             </tr>
         </table>
+
+        <form action="/cadastro/" method="post">
+            <label for="login">Login</label>
+            <input type="text"></input>
+
+            <label for="password">Senha</label>
+            <input type="password" name="senha" id="senha">
+
+            <label for="idade">Idade</label>
+            <input type="number" max="100" step="1" min="0" name="idade" id="idade">
+
+            <label for="sexo">Sexo</label>
+            <input type="radio" name="sexo" value="1" checked> Masculino
+            <input type="radio" name="sexo" value="2"> Feminino
+
+            <input type="checkbox" name="veiculo1" value="bike"> Eu tenho uma bike
+            <input type="checkbox" name="veiculo1" value="carro"> Eu tenho um carro
+
+            <label for="curso">Curso</label>
+            <select name="curso">
+                <option value="1">Ciência da Computação</option>
+                <option value="2">Direito</option>
+                <option value="3">Engenharia Elétrica</option>
+                <option value="4">Medicina</option>
+            </select>
+        </form>
+
+        Mensagem: <textarea name="message" rows="10" cols="30" id=""></textarea>
+        Data de nascimento: <input type="date" name="data_nascimento" min="2025-01-02">
+
+        Auto complete: <input list="cheeses">
+        <datalist id="cheeses">
+            <option>Camembert</option>
+            <option>Cheddar</option>
+            <option>Chèvre</option>
+            <option>Cotija</option>
+            <option>Emmental</option>
+            <option>Feta</option>
+            <option>Gouda</option>
+            <option>Manchego</option>
+            <option>Monterey Jack</option>
+            <option>Mozzarella</option>
+            <option>Parmigiano-Reggiano</option>
+        </datalist>
+
+        <input type="hidden" name="country" value="Brasil">
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+
+        <button type="button" onclikc="alert('Hello world!')">Botão 1</button>
+        <button type="button" onclick="soma(5, 10);">
+            Botão 02
+        </button>
     </body>
 </html>
