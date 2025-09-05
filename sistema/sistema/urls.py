@@ -17,9 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from sistema.views import index
+from sistema.views import Login
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', index, name="index")
+    path('', Login.as_view(), name="login")
 ]

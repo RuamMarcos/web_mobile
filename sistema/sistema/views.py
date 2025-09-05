@@ -1,4 +1,8 @@
 from django.http import HttpResponse
+from django.shortcuts import render
+from django.views import View 
 
-def index(request):
-    return HttpResponse("Sistema para gerenciamente de veiculos")
+class Login(View):
+    def get(self, request):
+        contexto = {}
+        return render(request, 'autenticacao.html', contexto)
